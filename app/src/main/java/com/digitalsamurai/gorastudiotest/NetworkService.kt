@@ -63,7 +63,6 @@ object NetworkService {
     //выполняет запрос, заданный по url и возвращает строку результата
 
     private  fun executeNetworkQuery(url : String): String {
-        //todo check internet available
         val connection = (URL(url).openConnection()) as HttpURLConnection;
         val result = readResponse(connection)
         return result
